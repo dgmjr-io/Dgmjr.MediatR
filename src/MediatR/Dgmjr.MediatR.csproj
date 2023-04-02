@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="AutoMapper.Extensions.ExpressionMapping" />
+    <PackageReference Include="AutoMapper" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    
+    <PackageReference Include="Dgmjr.Abstractions" />
+    <PackageReference Include="Dgmjr.EntityFrameworkCore.Abstractions" />
+    
+    <ProjectReference Include="../Abstractions/Dgmjr.MediatR.Abstractions.csproj" />
+  </ItemGroup>
+</Project>
