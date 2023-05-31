@@ -22,7 +22,7 @@ public record struct DeleteCommand<TId, TDto>(TDto Dto, TId Id) : IDeleteCommand
     // }
 
     public TDto Dto { get; } = Dto;
-    public TId Id { get; } = Id;
+public TId Id { get; } = Id;
 }
 
 public record struct DeleteCommand<TId>(TId Id) : IDeleteCommand<TId>
