@@ -12,8 +12,8 @@
 
 namespace Dgmjr.MediatR.Commands;
 
-public record struct  CreateCommand<TId, TCreateDto, TDto>(TCreateDto Create) : ICreateCommand<TId, TCreateDto, TDto>
-    where TId : IComparable, IEquatable<TId>
+public record struct CreateCommand<TId, TCreateDto, TDto>(TCreateDto Create) : ICreateCommand<TId, TCreateDto, TDto>
+   where TId : IComparable, IEquatable<TId>
 {
     // public CreateCommand() { }
     // public CreateCommand(TCreateDto createDto) => Create = createDto;

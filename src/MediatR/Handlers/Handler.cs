@@ -75,7 +75,7 @@ public class CrudHandler<TModel, TDbContext, TInsertDto, TUpdateDto, TViewDto, T
 
     public async Task<Unit> Handle(DeleteCommand<TId, TViewDto> request, CancellationToken cancellationToken)
     {
-        if(!request.Id.Equals(request.Dto.Id))
+        if (!request.Id.Equals(request.Dto.Id))
             throw new ArgumentException("The Id and Dto.Id must match.");
 
         var model = Db.Set<TModel>().Find(request.Id);
@@ -88,8 +88,8 @@ public class CrudHandler<TModel, TDbContext, TInsertDto, TUpdateDto, TViewDto, T
 
     public async Task<TViewDto> Handle(Query<TId, TViewDto> request, CancellationToken cancellationToken)
     {
-        var model = await Db.Set<TModel>().FirstOrDefaultAsync(Mapper.MapExpression<Expression<Func<TViewDto, bool>>, Expression <Func<TModel, bool> >>(request.Predicate));
-        if(model is null)
+        var model = await Db.Set<TModel>().FirstOrDefaultAsync(Mapper.MapExpression<Expression<Func<TViewDto, bool>>, Expression<Func<TModel, bool>>>(request.Predicate));
+        if (model is null)
             throw new KeyNotFoundException($"A(n) {typeof(TModel).Name} meeting the requested criteria was not found.");
         var dto = Mapper.Map<TViewDto>(model);
         return dto;
