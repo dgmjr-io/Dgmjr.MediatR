@@ -18,7 +18,12 @@ namespace Dgmjr.MediatR.Queries;
 public record struct Query<TDto> : IQuery<TDto>
 {
     public Query() { }
-    public Query(Expression<Func<TDto, bool>> predicate, int pageNumber = 1, int pageSize = int.MaxValue)
+
+    public Query(
+        Expression<Func<TDto, bool>> predicate,
+        int pageNumber = 1,
+        int pageSize = int.MaxValue
+    )
     {
         Predicate = predicate;
         PageNumber = pageNumber;
@@ -35,15 +40,20 @@ public record struct Query<TId, TDto> : IQuery<TId, TDto>
     where TDto : IIdentifiable<TId>
 {
     public Query() { }
-    public Query(Expression<Func<TDto, bool>> predicate, int pageNumber = 1, int pageSize = int.MaxValue)
+
+    public Query(
+        Expression<Func<TDto, bool>> predicate,
+        int pageNumber = 1,
+        int pageSize = int.MaxValue
+    )
     {
         Predicate = predicate;
         PageNumber = pageNumber;
         PageSize = pageSize;
     }
-    public Query(TId id) : this(_ => _.Id.Equals(id), 1, 1)
-    {
-    }
+
+    public Query(TId id)
+        : this(_ => _.Id.Equals(id), 1, 1) { }
 
     public Expression<Func<TDto, bool>>? Predicate { get; } = _ => true;
     public int PageSize { get; } = int.MaxValue;

@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+
 /*
  * ICreateCommand.cs
  *
@@ -14,6 +15,4 @@ using System.Net.Http.Headers;
 namespace Dgmjr.MediatR.Abstractions;
 
 public interface ICreateCommand<TId, TCreateDto, TDto> : ICommand<TDto>
-    where TId : IComparable, IEquatable<TId>
-{
-}
+    where TId : IComparable, IEquatable<TId> { }

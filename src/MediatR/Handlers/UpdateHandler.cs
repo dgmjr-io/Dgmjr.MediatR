@@ -16,7 +16,13 @@ using Dgmjr.MediatR.Handlers.Abstractions;
 
 public class UpdateHandler<TModel, TDbContext, TUpdateDto, TViewDto, TId>
     : IHaveADbContext<TDbContext>,
-        IUpdateHandler<UpdateCommand<TModel, TId, TUpdateDto, TViewDto>, TId, TModel, TUpdateDto, TViewDto>
+        IUpdateHandler<
+            UpdateCommand<TModel, TId, TUpdateDto, TViewDto>,
+            TId,
+            TModel,
+            TUpdateDto,
+            TViewDto
+        >
     where TDbContext : DbContext, IDbContext<TDbContext>
     where TModel : class, IIdentifiable<TId>
     where TId : IComparable, IEquatable<TId>
@@ -34,7 +40,10 @@ public class UpdateHandler<TModel, TDbContext, TUpdateDto, TViewDto, TId>
         Mapper = mapper;
     }
 
-    public Task<TViewDto> Handle(UpdateCommand<TModel, TId, TUpdateDto, TViewDto> request, CancellationToken cancellationToken)
+    public Task<TViewDto> Handle(
+        UpdateCommand<TModel, TId, TUpdateDto, TViewDto> request,
+        CancellationToken cancellationToken
+    )
     {
         var model = Db.Set<TModel>().Find(request.Update);
         Mapper.Map(request.Update, model);

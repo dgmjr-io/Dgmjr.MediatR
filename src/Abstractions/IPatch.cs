@@ -13,7 +13,4 @@
 namespace Dgmjr.MediatR.Abstractions;
 
 public interface IPatchCommand<TId, TPatchDto, TDto> : ICommand<TDto>
-    where TId : IComparable, IEquatable<TId>
-{
-
-}
+    where TId : IComparable, IEquatable<TId> { }

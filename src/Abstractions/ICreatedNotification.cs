@@ -1,4 +1,3 @@
-using System.Net.Http.Headers;
 /*
  * ICreateCommand.cs
  *
@@ -12,6 +11,7 @@ using System.Net.Http.Headers;
  */
 
 namespace Dgmjr.MediatR.Abstractions;
+using System.Net.Http.Headers;
 
 public interface ICreatedNotification<TId, TCreateDto, TDto> : INotification
     where TId : IComparable, IEquatable<TId>

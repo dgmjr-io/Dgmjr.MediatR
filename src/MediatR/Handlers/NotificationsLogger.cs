@@ -1,7 +1,9 @@
 namespace Dgmjr.MediatR.Notifications;
+
 using Microsoft.Extensions.Logging;
 
-public class NotificationsLogger<TNotification> : global::MediatR.INotificationHandler<TNotification>
+public class NotificationsLogger<TNotification>
+    : global::MediatR.INotificationHandler<TNotification>
     where TNotification : INotification
 {
     private readonly ILogger<NotificationsLogger<TNotification>> _logger;

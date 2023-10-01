@@ -15,10 +15,8 @@ using Dgmjr.MediatR.Abstractions;
 
 namespace Dgmjr.MediatR.Handlers.Abstractions;
 
-public interface IUpdateHandler<TUpdateCommand, TId, TModel, TUpdateDto, TDto> : IRequestHandler<TUpdateCommand, TDto>
+public interface IUpdateHandler<TUpdateCommand, TId, TModel, TUpdateDto, TDto>
+    : IRequestHandler<TUpdateCommand, TDto>
     where TUpdateCommand : IUpdateCommand<TModel, TId, TUpdateDto, TDto>
     where TModel : class, IIdentifiable<TId>
-    where TId : IComparable, IEquatable<TId>
-{
-
-}
+    where TId : IComparable, IEquatable<TId> { }

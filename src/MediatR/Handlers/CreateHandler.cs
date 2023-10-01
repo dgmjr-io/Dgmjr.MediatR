@@ -34,13 +34,19 @@ public class CreateHAndler<TModel, TDbContext, TInsertDto, TViewDto, TId>
         Mapper = mapper;
     }
 
-    public async Task<TViewDto> Handle(CreateCommand<TId, TInsertDto, TViewDto> request, CancellationToken cancellationToken)
+    public async Task<TViewDto> Handle(
+        CreateCommand<TId, TInsertDto, TViewDto> request,
+        CancellationToken cancellationToken
+    )
     {
         var model = Mapper.Map<TModel>(request.Create);
         Db.Set<TModel>().Add(model);
         await Db.SaveChangesAsync();
         var dto = Mapper.Map<TViewDto>(model);
-        await Mediator.Publish(new CreatedNotification<TId, TInsertDto, TViewDto>(model.Id, dto), cancellationToken);
+        await Mediator.Publish(
+            new CreatedNotification<TId, TInsertDto, TViewDto>(model.Id, dto),
+            cancellationToken
+        );
         return dto;
     }
 }

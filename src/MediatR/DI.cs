@@ -21,6 +21,7 @@ public static class MediatRExtensions
         services.AddMediatR(typeof(T).Assembly);
         return services;
     }
+
 #if NET6_0_OR_GREATER
     public static WebApplicationBuilder AddMediatR(this WebApplicationBuilder builder)
     {

@@ -14,9 +14,7 @@ using Dgmjr.MediatR.Abstractions;
 
 namespace Dgmjr.MediatR.Handlers.Abstractions;
 
-public interface IPatchHandler<TPatchCommand, TId, TPatchDto, TDto> : IRequestHandler<TPatchCommand, TDto>
+public interface IPatchHandler<TPatchCommand, TId, TPatchDto, TDto>
+    : IRequestHandler<TPatchCommand, TDto>
     where TPatchCommand : IPatchCommand<TId, TPatchDto, TDto>
-    where TId : IComparable, IEquatable<TId>
-{
-
-}
+    where TId : IComparable, IEquatable<TId> { }

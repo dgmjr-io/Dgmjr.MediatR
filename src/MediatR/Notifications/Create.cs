@@ -11,13 +11,18 @@
  */
 
 namespace Dgmjr.MediatR.Notifications;
+
 using Dgmjr.MediatR.Abstractions;
 
-public record struct CreatedNotification<TId, TCreateDto, TDto> : ICreatedNotification<TId, TDto, TCreateDto>
+public record struct CreatedNotification<TId, TCreateDto, TDto>
+    : ICreatedNotification<TId, TDto, TCreateDto>
     where TId : IComparable, IEquatable<TId>
 {
     public CreatedNotification() { }
+
     public CreatedNotification(TDto dto) => Created = dto;
+
     public CreatedNotification(TId id, TDto dto) => Created = dto;
+
     public TDto Created { get; set; }
 }

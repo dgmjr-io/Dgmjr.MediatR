@@ -11,11 +11,9 @@
  */
 
 namespace Dgmjr.MediatR.Abstractions;
+
 using Dgmjr.Abstractions;
 
 public interface IUpdateCommand<TModel, TId, TUpdateDto, TDto> : ICommand<TDto>
     where TModel : class, IIdentifiable<TId>
-    where TId : IComparable, IEquatable<TId>
-{
-
-}
+    where TId : IComparable, IEquatable<TId> { }
