@@ -13,7 +13,9 @@
 namespace Dgmjr.MediatR.Abstractions;
 
 public interface IDeletedNotification<TId, TDto> : INotification
-    where TId : IComparable, IEquatable<TId> { }
+    where TId : IComparable, IEquatable<TId>
+{ }
 
 public interface IDeletedNotification<TId> : INotification
-    where TId : IComparable, IEquatable<TId> { }
+    where TId : IComparable, IEquatable<TId>
+{ }

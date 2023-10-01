@@ -19,7 +19,9 @@ public interface IQueryHandler<TQuery, TId, TModel, TDto> : IRequestHandler<TQue
     where TQuery : IQuery<TId, TDto>
     where TId : IComparable, IEquatable<TId>
     where TDto : IIdentifiable<TId>
-    where TModel : IIdentifiable<TId> { }
+    where TModel : IIdentifiable<TId>
+{ }
 
 public interface IQueryHandler<TQuery, TDto> : IRequestHandler<TQuery, IEnumerable<TDto>>
-    where TQuery : IQuery<TDto> { }
+    where TQuery : IQuery<TDto>
+{ }
