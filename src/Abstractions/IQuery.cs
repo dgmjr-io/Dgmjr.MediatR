@@ -16,7 +16,8 @@ using Dgmjr.Abstractions;
 namespace Dgmjr.MediatR.Abstractions;
 
 public interface IQuery<TId, TDto> : IQueryBase<TDto>, IRequest<TDto>
-    where TId : IComparable, IEquatable<TId> { }
+    where TId : IComparable, IEquatable<TId>
+{ }
 
 public interface IQuery<TDto> : IQueryBase<TDto>, IRequest<IEnumerable<TDto>>
 {
