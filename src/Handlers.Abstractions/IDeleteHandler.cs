@@ -14,8 +14,10 @@ namespace Dgmjr.MediatR.Handlers.Abstractions;
 
 public interface IDeleteHandler<TDeleteCommand, TId, TDto> : IDeleteHandler<TDeleteCommand, TId>
     where TId : IComparable, IEquatable<TId>
-    where TDeleteCommand : IDeleteCommand<TId, TDto> { }
+    where TDeleteCommand : IDeleteCommand<TId, TDto>
+{ }
 
 public interface IDeleteHandler<TDeleteCommand, TId> : IRequestHandler<TDeleteCommand, Unit>
     where TId : IComparable, IEquatable<TId>
-    where TDeleteCommand : IDeleteCommand<TId> { }
+    where TDeleteCommand : IDeleteCommand<TId>
+{ }
