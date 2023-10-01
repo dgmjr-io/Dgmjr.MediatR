@@ -1,0 +1,25 @@
+<!--
+ * Dgmjr.MediatR.Abstractions.csproj
+ *
+ *   Created: 2022-12-21-09:49:12
+ *   Modified: 2022-12-21-09:49:12
+ *
+ *   Author:  <david@dgmjr.io>
+ *
+ *   Copyright © 2022-2023 , All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+    <PackageReference Include="Dgmjr.Abstractions" />
+    <ProjectReference Include="../Notifications.Abstractions/Dgmjr.MediatR.Notifications.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="../System.Runtime.CompilerServices/*.cs" />
+  </ItemGroup>
+</Project>

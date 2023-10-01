@@ -1,0 +1,32 @@
+<!--
+ * MediatR.csproj
+ *
+ *   Created: 2022-12-30-05:36:32
+ *   Modified: 2022-12-30-05:36:32
+ *
+ *   Author: David G. Moore, Jr. <david@dgmjr.io>
+ *
+ *   Copyright © 2022-2023 David G. Moore, Jr., All Rights Reserved
+ *      License: MIT (https://opensource.org/licenses/MIT)
+-->
+
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <IsAtRoot>true</IsAtRoot>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="./src/Abstractions/Dgmjr.MediatR.Abstractions.csproj" />
+    <ProjectReference Include="./src/Commands.Abstractions/Dgmjr.MediatR.Commands.Abstractions.csproj" />
+    <ProjectReference Include="./src/Commands/Dgmjr.MediatR.Commands.csproj" />
+    <ProjectReference Include="./src/Notifications.Abstractions/Dgmjr.MediatR.Notifications.Abstractions.csproj" />
+    <ProjectReference Include="./src/Notifications/Dgmjr.MediatR.Notifications.csproj" />
+    <ProjectReference Include="./src/Handlers.Abstractions/Dgmjr.MediatR.Handlers.Abstractions.csproj" />
+    <ProjectReference Include="./src/Handlers/Dgmjr.MediatR.Handlers.csproj" />
+    <ProjectReference Include="./src/Queries.Abstractions/Dgmjr.MediatR.Queries.Abstractions.csproj" />
+    <ProjectReference Include="./src/Queries/Dgmjr.MediatR.Queries.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="./src/**/*.cs" />
+  </ItemGroup>
+</Project>
