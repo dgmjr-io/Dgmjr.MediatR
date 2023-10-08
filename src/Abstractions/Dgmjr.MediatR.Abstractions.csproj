@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0</TargetFrameworks>
+    <Description>This is a metapackage that contains references to the following packages:
+    * Dgmjr.MediatR.Commands.Abstractions
+    * Dgmjr.MediatR.Handlers.Abstractions
+    * Dgmjr.MediatR.Notifications.Abstractions
+    * Dgmjr.MediatR.Queries.Abstractions
+    </Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../Commands.Abstractions/Dgmjr.MediatR.Commands.Abstractions.csproj" />
+    <ProjectReference Include="../Handlers.Abstractions/Dgmjr.MediatR.Handlers.Abstractions.csproj" />
+    <ProjectReference Include="../Notifications.Abstractions/Dgmjr.MediatR.Notifications.Abstractions.csproj" />
+    <ProjectReference Include="../Queries.Abstractions/Dgmjr.MediatR.Queries.Abstractions.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="@(Compile)" />
+  </ItemGroup>
+</Project>

@@ -12,18 +12,14 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" />
     <PackageReference Include="AutoMapper" />
     <PackageReference Include="Dgmjr.Abstractions" />
     <PackageReference Include="Dgmjr.EntityFrameworkCore.Abstractions" />
-    <ProjectReference Include="../Commands.Abstractions/Dgmjr.MediatR.Commands.Abstractions.csproj" />
-    <ProjectReference Include="../Commands/Dgmjr.MediatR.Commands.csproj" />
-    <ProjectReference Include="../Handlers/Dgmjr.MediatR.Handlers.csproj" />
-    <ProjectReference Include="../Queries.Abstractions/Dgmjr.MediatR.Queries.Abstractions.csproj" />
-    <ProjectReference Include="../Queries/Dgmjr.MediatR.Queries.csproj" />
+    <ProjectReference Include="../Handlers.Abstractions/Dgmjr.MediatR.Handlers.Abstractions.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="../System.Runtime.CompilerServices/*.cs" />
