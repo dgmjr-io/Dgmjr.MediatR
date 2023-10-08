@@ -17,4 +17,5 @@ namespace Dgmjr.MediatR.Handlers.Abstractions;
 public interface ICreateHandler<TCreateCommand, TId, TCreateDto, TDto>
     : IRequestHandler<TCreateCommand, TDto>
     where TId : IComparable, IEquatable<TId>
-    where TCreateCommand : ICreateCommand<TId, TCreateDto, TDto> { }
+    where TCreateCommand : ICreateCommand<TId, TCreateDto, TDto>
+{ }
