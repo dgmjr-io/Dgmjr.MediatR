@@ -13,7 +13,8 @@
 namespace Dgmjr.MediatR.Queries.Abstractions;
 
 public interface IQuery<TId, TDto> : IQueryBase<TDto>, IRequest<TDto>
-    where TId : IComparable, IEquatable<TId> { }
+    where TId : IComparable, IEquatable<TId>
+{ }
 
 public interface IQuery<TDto> : IQueryBase<TDto>, IRequest<IEnumerable<TDto>> { }
 
