@@ -12,14 +12,15 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MediatR" />
     <PackageReference Include="Dgmjr.Abstractions" />
+    <SourceCodePackageReference Include="System.PrivCorLib.Polyfill" />
     <ProjectReference Include="../Notifications.Abstractions/Dgmjr.MediatR.Notifications.Abstractions.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="../System.Runtime.CompilerServices/*.cs" />
+    <!-- <Compile Include="../System.Runtime.CompilerServices/*.cs" /> -->
   </ItemGroup>
 </Project>
