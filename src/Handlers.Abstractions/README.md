@@ -1,4 +1,5 @@
 ---
+
 title: Dgmjr.MediatR.Handlers.Abstractions
 lastmod:
 date:
@@ -8,7 +9,7 @@ version: 0.0.1-Local
 type: readme
 authors:
 description: Package Description
-      
+
 Built from [commit  on branch  at ]
 (/tree/)
 keywords:
@@ -16,18 +17,28 @@ keywords:
 - dgmjr
 - dgmjr-io
 type: readme
----
+------------
+
 # Dgmjr.MediatR.Handlers.Abstractions Readme
+
 ## Package Description
+
 Package Description
-      
-Built from [commit  on branch  at ]
+
+Built from [commit  on branch  at]
 (/tree/)
+
 ## Getting Started
+
 ## Prerequisites
+
 ## Installation
+
 ## Usage
+
 ## Contributing
+
 ## Versioning
-Built from [commit  on branch  at ]
+
+Built from [commit  on branch  at]
 (/tree/)
