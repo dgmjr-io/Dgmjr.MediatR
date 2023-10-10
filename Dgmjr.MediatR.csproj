@@ -12,8 +12,8 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
-    <IsAtRoot>true</IsAtRoot>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProjectGuid>74f57ab1-5ba2-4638-ba26-c7ab0299f866</ProjectGuid>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="./src/Abstractions/Dgmjr.MediatR.Abstractions.csproj" />
