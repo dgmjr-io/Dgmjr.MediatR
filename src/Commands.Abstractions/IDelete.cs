@@ -22,5 +22,5 @@ public interface IDeleteCommand<TId, TDto> : IDeleteCommand<TId>
 public interface IDeleteCommand<TId> : ICommand<Unit>
     where TId : IComparable, IEquatable<TId>
 {
-     TId Id { get; }
+    TId Id { get; }
 }
