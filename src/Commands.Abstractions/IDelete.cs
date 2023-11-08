@@ -14,8 +14,13 @@ namespace Dgmjr.MediatR.Commands.Abstractions;
 
 public interface IDeleteCommand<TId, TDto> : IDeleteCommand<TId>
     where TId : IComparable, IEquatable<TId>
-{ }
+{
+
+    TDto Dto { get; }
+}
 
 public interface IDeleteCommand<TId> : ICommand<Unit>
     where TId : IComparable, IEquatable<TId>
-{ }
+{
+     TId Id { get; }
+}

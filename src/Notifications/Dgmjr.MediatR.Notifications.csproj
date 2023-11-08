@@ -17,7 +17,7 @@
   <ItemGroup>
     <PackageReference Include="MediatR" />
     <PackageReference Include="Dgmjr.Abstractions" />
-    <SourceCodePackageReference Include="System.PrivCorLib.Polyfill" />
+    <SourceCode Include="System.PrivCorLib.Polyfill" />
     <ProjectReference Include="../Notifications.Abstractions/Dgmjr.MediatR.Notifications.Abstractions.csproj" />
   </ItemGroup>
   <ItemGroup>

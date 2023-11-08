@@ -17,11 +17,19 @@
   <ItemGroup>
     <PackageReference Include="MediatR" />
     <PackageReference Include="AutoMapper" />
+    <PackageReference Include="AutoMapper.Extensions.ExpressionMapping" />
     <PackageReference Include="Dgmjr.Abstractions" />
     <PackageReference Include="Dgmjr.EntityFrameworkCore.Abstractions" />
     <ProjectReference Include="../Handlers.Abstractions/Dgmjr.MediatR.Handlers.Abstractions.csproj" />
+    <ProjectReference Include="../Queries/Dgmjr.MediatR.Queries.csproj" />
+    <ProjectReference Include="../Commands/Dgmjr.MediatR.Commands.csproj" />
+    <ProjectReference Include="../Notifications/Dgmjr.MediatR.Notifications.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="../System.Runtime.CompilerServices/*.cs" />
   </ItemGroup>
+  <Import Project="../Handlers.Abstractions/Dgmjr.MediatR.Handlers.Abstractions.props" />
+  <Import Project="../Queries/Dgmjr.MediatR.Queries.props" />
+  <Import Project="../Commands/Dgmjr.MediatR.Commands.props" />
+  <Import Project="../Notifications/Dgmjr.MediatR.Notifications.props" />
 </Project>

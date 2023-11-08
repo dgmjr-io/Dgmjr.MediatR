@@ -17,6 +17,7 @@
   <ItemGroup>
     <PackageReference Include="MediatR" />
     <PackageReference Include="Dgmjr.Abstractions" />
+    <PackageReference Include="Microsoft.AspNetCore.JsonPatch" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="../System.Runtime.CompilerServices/*.cs" />

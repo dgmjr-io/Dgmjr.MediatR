@@ -16,4 +16,6 @@ namespace Dgmjr.MediatR.Commands.Abstractions;
 
 public interface ICreateCommand<TId, TCreateDto, TDto> : ICommand<TDto>
     where TId : IComparable, IEquatable<TId>
-{ }
+{
+    TCreateDto Create { get; init; }
+}

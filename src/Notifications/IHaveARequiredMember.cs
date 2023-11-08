@@ -1,6 +1,6 @@
-namespace System.Foo;
+// namespace System.Foo;
 
-public class IHaveARequiredMember
-{
-    public required string FirstName { get; set; }
-}
+// public class IHaveARequiredMember
+// {
+//     public required string FirstName { get; set; }
+// }

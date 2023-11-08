@@ -11,7 +11,12 @@
  */
 
 namespace Dgmjr.MediatR.Commands.Abstractions;
+using Microsoft.AspNetCore.JsonPatch;
 
 public interface IPatchCommand<TId, TPatchDto, TDto> : ICommand<TDto>
     where TId : IComparable, IEquatable<TId>
-{ }
+    where TDto : class
+{
+    JsonPatchDocument<TDto> Patch { get; init; }
+    TId Id { get; init; }
+}

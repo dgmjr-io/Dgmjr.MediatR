@@ -18,7 +18,7 @@ public static class MediatRExtensions
 {
     public static IServiceCollection AddMediatR<T>(this IServiceCollection services)
     {
-        services.AddMediatR(typeof(T).Assembly);
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblyContaining<T>());
         return services;
     }
 

@@ -16,4 +16,5 @@ public interface IPatchHandler<TPatchCommand, TId, TPatchDto, TDto>
     : IRequestHandler<TPatchCommand, TDto>
     where TPatchCommand : IPatchCommand<TId, TPatchDto, TDto>
     where TId : IComparable, IEquatable<TId>
+    where TDto : class
 { }
